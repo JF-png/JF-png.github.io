@@ -48,21 +48,15 @@
 		}
 		
 </style>  
+<script src = "https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     </head>
     <div style="font-family: Inter; position: absolute;left:-1000px; visibility: hidden;">.</div>
     <body>
-    	<script src="bundle.js" async></script> 
+    	<script src="bundle.js"></script> 
     	<div id="wrapper"></div>
     	<script>
     		var sdkReady = true;
-    		let sdkScript = document.createElement('script');
-    		sdkScript.src = "https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js";
-    		sdkScript.onload = function()
-    		{
-    				vkBridge.send('VKWebAppInit');
-    		};
-    		sdkScript.onerror = function(){console.log('ошибка загрузки')}
-    		document.body.append(sdkScript);
+    		vkBridge.send('VKWebAppInit');
     	</script>	
         
     </body>
