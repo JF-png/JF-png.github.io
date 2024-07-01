@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Соединяй-ка - 2048</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src = "js/lib.js"></script>
+        <script src = "js/global.js"></script>
+        <script src = "js/game.js" defer></script>
+        <script>
+            let assets = require("/assets");
+        </script>
+        <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            overflow: hidden;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+      @font-face {
+        font-family: Inter;
+        src: url('assets/fonts/Inter-ExtraBold.ttf');
+        font-weight:400;
+        font-weight:bold;
+      }
+        @font-face {
+        font-family: Inter;
+        src: url('assets/fonts/Inter-Regular.ttf');
+        font-weight:400;
+        font-weight:normal;
+      }
+
+        body {
+            background-size: cover;
+            background-color: #000000;
+              -webkit-touch-callout:none;
+             -webkit-user-select:none;
+            -khtml-user-select:none;
+             -moz-user-select:none;
+             -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+        }
+        canvas {
+            touch-action-delay: none;
+            touch-action: none;
+            -ms-touch-action: none;
+            -webkit-box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.3);
+
+        }
+</style>  
+    </head>
+    <body>
+        <div style="font-family:Inter;font-weight: bold; position:absolute; left:-1000px; visibility:hidden;">.</div>
+        <div style="font-family:Inter;font-weight: normal; position:absolute; left:-1000px; visibility:hidden;">.</div>
+        <script>
+        let sdkLoaded = true;
+            afterGPLoaded();
+        
+        </script>  
+        <div id="wrapper"></div>
+    </body>
+</html>
